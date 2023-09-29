@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+  go-crud:
+    image: matheusmc/go-api-mongo
+    restart: always
+    ports:
+      - 9080:9080
+    environment:
+      MONGO_DB_HOST: mongodb
+    depends_on:
+      - mongodb
+  mongodb:
+    image: mongo
+    restart: always
+    volumes:
+      - mongodb:/data/db
+
+volumes:
+  go-crud:
+  mongodb:
