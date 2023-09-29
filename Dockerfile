@@ -23,7 +23,7 @@ WORKDIR /
 
 COPY --from=build-stage /go-crud /go-crud
 
-EXSE 9080
+EXPOSE 9080
 
 USER nonroot:nonroot
 

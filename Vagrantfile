@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
   # Defina o nome do host
   config.vm.hostname = "meu-host-ubuntu"
 
-  ssdsdsdsds.config.vm.provision "shell", inline: <<-SHELL
+  config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update
     # Personalize sua máquina virtual aqui
   SHELL
